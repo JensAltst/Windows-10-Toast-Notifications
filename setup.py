@@ -15,6 +15,9 @@ def parse_requirements(filename):
     lines = (line.strip() for line in open(filename))
     return [line for line in lines if line and not line.startswith("#")]
 
+with open(path.join(BASE_DIR, "README.md")) as readme_file:
+    readme = readme_file.read()
+
 req_files = {
     "requirements": "requirements.txt",
 }
@@ -26,7 +29,7 @@ for req, req_file in req_files.items():
 setup(
     name="win10toast",
     version="0.9",
-    install_requires=req_files,
+    install_requires=requirements["requirements"],
     packages=["win10toast"],
     license="BSD",
     url="https://github.com/jithurjacob/Windows-10-Toast-Notifications",
@@ -40,7 +43,7 @@ setup(
         '': ['*.txt'],
         'win10toast': ['data/*.ico'],
     },
-    long_description=read('README.md'),
+    long_description=readme,
     author="Jithu R Jacob",
     author_email="jithurjacob@gmail.com",
     classifiers=[
