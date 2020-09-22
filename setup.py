@@ -32,8 +32,8 @@ setup(
     install_requires=requirements["requirements"],
     packages=["win10toast"],
     license="BSD",
-    url="https://github.com/jithurjacob/Windows-10-Toast-Notifications",
-    download_url = 'https://github.com/jithurjacob/Windows-10-Toast-Notifications/tarball/0.9',
+    url="https://github.com/JensAltst/Windows-10-Toast-Notifications",
+    download_url = 'https://github.com/JensAltst/Windows-10-Toast-Notifications',
     description=(
         "An easy-to-use Python library for displaying "
         "Windows 10 Toast Notifications"
