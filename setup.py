@@ -15,13 +15,6 @@ def parse_requirements(filename):
     lines = (line.strip() for line in open(filename))
     return [line for line in lines if line and not line.startswith("#")]
 
-
-with open(path.join(BASE_DIR, "README.rst")) as readme_file:
-    readme = readme_file.read()
-
-with open(path.join(BASE_DIR, "HISTORY.rst")) as history_file:
-    history = history_file.read()
-
 req_files = {
     "requirements": "requirements.txt",
 }
