@@ -28,7 +28,7 @@ for req, req_file in req_files.items():
 
 setup(
     name="win10toast",
-    version="0.9",
+    version="0.9.1",
     install_requires=requirements["requirements"],
     packages=["win10toast"],
     license="BSD",
