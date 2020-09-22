@@ -26,7 +26,7 @@ for req, req_file in req_files.items():
 setup(
     name="win10toast",
     version="0.9",
-    install_requires=requirements_txt,
+    install_requires=req_files,
     packages=["win10toast"],
     license="BSD",
     url="https://github.com/jithurjacob/Windows-10-Toast-Notifications",
