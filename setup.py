@@ -19,7 +19,7 @@ def parse_requirements(filename):
 
 requirements_txt = list(map(str, map(
     attrgetter("req"),
-    parse_requirements(from_here("requirements.txt"), session="")
+    parse_requirements(from_here("requirements.txt"))
 )))
 
 setup(
