@@ -12,6 +12,10 @@ def read(fname):
 def from_here(relative_path):
     return path.join(path.dirname(__file__), relative_path)
 
+def parse_requirements(filename):
+    """ load requirements from a pip requirements file """
+    lines = (line.strip() for line in open(filename))
+    return [line for line in lines if line and not line.startswith("#")]
 
 requirements_txt = list(map(str, map(
     attrgetter("req"),
